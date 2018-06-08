@@ -29,7 +29,7 @@ function makeMetadataRequest(params, callback) {
     makeRequest(options, callback);
 }
 
-describe('metadata routes with metadata mock backend', () => {
+describe.only('metadata routes with metadata mock backend', () => {
     let httpServer;
 
     before(done => {
