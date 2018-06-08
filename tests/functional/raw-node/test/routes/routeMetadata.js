@@ -49,6 +49,7 @@ describe.only('metadata routes with metadata mock backend', () => {
             authCredentials: metadataAuthCredentials,
             path: '/_/metadata/listbuckets/1',
         }, (err, res) => {
+            console.log(err, res);
             assert.ifError(err);
             assert.strictEqual(res.statusCode, 200);
             assert(res.body);
@@ -63,6 +64,7 @@ describe.only('metadata routes with metadata mock backend', () => {
             authCredentials: metadataAuthCredentials,
             path: '/_/metadata/listobjects/bucket1',
         }, (err, res) => {
+            console.log(err, res);
             assert.ifError(err);
             assert.strictEqual(res.statusCode, 200);
             const body = JSON.parse(res.body);
@@ -77,6 +79,7 @@ describe.only('metadata routes with metadata mock backend', () => {
             authCredentials: metadataAuthCredentials,
             path: '/_/metadata/getbucket/bucket1',
         }, (err, res) => {
+            console.log(err, res);
             assert.ifError(err);
             assert.strictEqual(res.statusCode, 200);
             assert(res.body);
@@ -90,6 +93,7 @@ describe.only('metadata routes with metadata mock backend', () => {
             authCredentials: metadataAuthCredentials,
             path: '/_/metadata/getobject/bucket1/testobject1',
         }, (err, res) => {
+            console.log(err, res);
             assert.ifError(err);
             assert(res.body);
             assert.strictEqual(res.statusCode, 200);

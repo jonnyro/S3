@@ -207,6 +207,7 @@ class MetadataMock {
                 error: 'mock server only supports GET requests',
             }));
         }
+        console.log('this  is the req.url', req.url);
         if (/\/_\/raft_sessions\/[1-8]\/bucket/.test(req.url)) {
             const value = ['bucket1', 'bucket2'];
             res.writeHead(200, { 'content-type': 'application/json' });
