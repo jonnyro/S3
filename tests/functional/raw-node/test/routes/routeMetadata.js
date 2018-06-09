@@ -68,6 +68,7 @@ describe.only('metadata routes with metadata mock backend', () => {
             assert.ifError(err);
             assert.strictEqual(res.statusCode, 200);
             const body = JSON.parse(res.body);
+            console.log('BODY IS', body);
             assert.strictEqual(body.Contents[0].key, 'testobject1');
             return done();
         });
