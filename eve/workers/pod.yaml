@@ -29,6 +29,8 @@ spec:
           buildbot-worker create-worker . $BUILDMASTER:$BUILDMASTER_PORT $WORKERNAME $WORKERPASS
           buildbot-worker start --nodaemon
       env:
+        - name: CI
+          value: "true"
         - name: S3BACKEND
           value: "{{ vars.S3BACKEND }}"
         - name: MPU_TESTING
